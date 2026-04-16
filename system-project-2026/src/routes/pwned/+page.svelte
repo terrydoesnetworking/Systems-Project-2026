@@ -1,7 +1,4 @@
-
-
-
-<!-- <script>
+<!--a <script>
   // svelte-ignore non_reactive_update
     let showPopup = true;
 
@@ -99,3 +96,64 @@
     document.getElementById("overlay").classList.remove("hidden");
   };
 </script> -->
+
+
+<script>
+  let showPopup = $state(true);
+
+  function accept() {
+    showPopup = false;
+  }
+</script>
+
+{#if showPopup}
+  <div class="overlay"></div>
+
+  <div class="popup">
+    <h1>You Got Pwned</h1>
+    <p>This site will show and explain how to prevent this from happening.</p>
+    <button onclick={accept}>Continue</button>
+  </div>
+{/if}
+
+<style>
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1001;
+    text-align: center;
+    max-width: 400px;
+    width: 80%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .popup h1 {
+    color: red;
+    margin-bottom: 10px;
+  }
+
+  .popup p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .popup button {
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+</style>
