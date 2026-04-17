@@ -1,3 +1,59 @@
+# Starting on Systems Project 2026
+    
+    Hello teammates, I would like to address some of the things you will have to do when cloning
+    this project. This is a loose idea what what you will need to do so if I am missing something or 
+    if you ran into a different issue please address me so I can help you and I can update the Readme.txt 
+    to reflect the issue
+
+    Step 1: Step one would be to make sure you have Node Package Manager (npm) installed on your system
+
+        to do this on a windows machine you can open powershell and run: 
+                
+        winget install OpenJS.NodeJS.LTS
+
+        then verify your install with:
+
+        node -v
+        npm -v
+            
+        note: if you cannot use the command still try closing and opening your powershell instance
+        
+        if you are still having issues running these commands try running Set-ExecutionPolicy RemoteSigned 
+        as administrator in powershell
+
+    Step 2: If you now have powershell installed on your system then you can use npm to install all the dependancies needed for this project (it is alot but we can cull the herd when we figure out what we dont want)
+
+        to do this you can start by opening the terminal in the folder of the project (you should see things in the folder like src, README.txt, etc.) and then running the command:
+
+        npm install
+        
+        this should install the dependancies needed for this project. 
+
+        side note: you can use VScode to do alot of this so you are not going from your text editor to a terminal
+        if you are unsure how you can ask me and I can tell you but googling it should suffice.
+
+    Step 3: Now you have the dependancies for the project, it is time to set up Better Auth. This can get confusing but it is easy. In the project folder you will find a .env.example file, I want you to copy that file and paste it in the same folder but instead name it .env 
+
+        Now you should have a .env file and a .env.example file. Now I want you to open the .env.example file in your text editor and open the link. On the link it will have a step by step provedure to set this up but if you want to skip all of that go to Step 2 Set Environment Varibles and you will see a Generate Secret button. Click that and then copy the output. 
+
+        Paste the output into your .env file and it should look like this
+
+        BETTER_AUTH_SECRET="example"
+
+        or 
+
+        BETTER_AUTH_SECRET="QLLxW1z454AjUVeZYe4soX8W79qwUdI6"           <only a example cannot be used>
+
+
+    From here the project should be up to par, if you are interested in seeing it run try running the command:
+
+    npm run dev
+
+    Let me know if there is anything I can help with this process and if you had any issues with the process as well.
+
+
+# Dont worry about this stuff atm
+
 # Svelte library
 
 Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).
