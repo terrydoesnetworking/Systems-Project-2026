@@ -8,28 +8,28 @@
     Step 1: Step one would be to make sure you have Node Package Manager (npm) installed on your system
 
         to do this on a windows machine you can open powershell and run: 
-        ```sh
+        
         # installing npm        
         winget install OpenJS.NodeJS.LTS
-        ```
+        
         then verify your install with:
-        ```sh
+        
         # verifying install
         node -v
         npm -v
-        ```    
+            
         note: if you cannot use the command still try closing and opening your powershell instance
         
-        if you are still having issues running these commands try running `Set-ExecutionPolicy RemoteSigned` 
+        if you are still having issues running these commands try running Set-ExecutionPolicy RemoteSigned
         as administrator in powershell
 
     Step 2: If you now have powershell installed on your system then you can use npm to install all the dependancies needed for this project (it is alot but we can cull the herd when we figure out what we dont want)
 
         to do this you can start by opening the terminal in the folder of the project (you should see things in the folder like src, README.txt, etc.) and then running the command:
-        ```sh
+        
         # install dependancies 
         npm install
-        ```
+        
         this should install the dependancies needed for this project. 
 
         side note: you can use VScode to do alot of this so you are not going from your text editor to a terminal
@@ -40,18 +40,18 @@
         Now you should have a .env file and a .env.example file. Now I want you to open the .env.example file in your text editor and open the link. On the link it will have a step by step provedure to set this up but if you want to skip all of that go to Step 2 Set Environment Varibles and you will see a Generate Secret button. Click that and then copy the output. 
 
         Paste the output into your .env file and it should look like this
-        ```sh
+        
         BETTER_AUTH_SECRET="example"
-        ```
+        
         or 
-        ```sh
+        
         BETTER_AUTH_SECRET="QLLxW1z454AjUVeZYe4soX8W79qwUdI6"           <only a example cannot be used>
-        ```
+        
 
     From here the project should be up to par, if you are interested in seeing it run try running the command:
-    ```sh
+    
     npm run dev
-    ```
+    
     Let me know if there is anything I can help with this process and if you had any issues with the process as well.
 
 
@@ -67,31 +67,31 @@ Read more about creating a library [in the docs](https://svelte.dev/docs/kit/pac
 
 If you're seeing this, you've probably already done this step. Congrats!
 
-```sh
+sh
 # create a new project in the current directory
 npx sv create
 
 # create a new project in my-app
 npx sv create my-app
-```
+
 
 To recreate this project with the same configuration:
 
-```sh
+sh
 # recreate this project
 npx sv@0.15.1 create --template library --types ts --add tailwindcss="plugins:typography,forms" better-auth="demo:password" paraglide="languageTags:en, es+demo:yes" storybook mdsvex drizzle="database:mysql+mysql:mysql2+docker:yes" playwright vitest="usages:unit,component" prettier --install npm system-project-2026
-```
+
 
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-```sh
+sh
 npm run dev
 
 # or start the server and open the app in a new browser tab
 npm run dev -- --open
-```
+
 
 Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
 
@@ -99,15 +99,15 @@ Everything inside `src/lib` is part of your library, everything inside `src/rout
 
 To build your library:
 
-```sh
+sh
 npm pack
-```
+
 
 To create a production version of your showcase app:
 
-```sh
+sh
 npm run build
-```
+
 
 You can preview the production build with `npm run preview`.
 
@@ -119,6 +119,6 @@ Go into the `package.json` and give your package the desired name through the `"
 
 To publish your library to [npm](https://www.npmjs.com):
 
-```sh
+sh
 npm publish
-```
+
