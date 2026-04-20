@@ -15,11 +15,13 @@
 	<a href="/">home</a>
 	<a href="/demo">demo</a>
 </nav> -->
+
 <Header />
 
 <main>
 	{@render children()}
 </main>
+
 <Footer />
 
 <div style="display:none">

@@ -1,9 +1,8 @@
-import { mysqlTable, serial, int, text } from 'drizzle-orm/mysql-core';
+import { int, sqliteTable, text } from "drizzle-orm/sqlite-core";
 
-export const task = mysqlTable('task', {
-	id: serial('id').primaryKey(),
-	title: text('title').notNull(),
-	priority: int('priority').notNull().default(1)
+export const usersTable = sqliteTable("users_table", {
+  id: int().primaryKey({ autoIncrement: true }),
+  name: text().notNull(),
+  age: int().notNull(),
+  email: text().notNull().unique(),
 });
-
-export * from './auth.schema';
