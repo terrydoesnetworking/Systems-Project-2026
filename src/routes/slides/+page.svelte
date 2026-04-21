@@ -1,127 +1,112 @@
- <main class="min-h-screen bg-gray-50 py-8">
-  <div class="container mx-auto px-4">
-    <h1 class="text-3xl font-bold text-center mt-4 mb-8 text-gray-800">Information Slides</h1>
-    
-    <div class="bg-white rounded-lg shadow-md mb-4 overflow-hidden">
-      <div class="p-6">
+<main class="min-h-screen bg-gray-50 py-8">
+	<div class="container mx-auto px-4">
+		<h1 class="mt-4 mb-8 text-center text-3xl font-bold text-gray-800">Information Slides</h1>
 
-        <!-- Top Level Tabs -->
-        <div class="flex border-b border-gray-200 mb-6">
-          <button class="tab-btn px-6 py-3 font-medium text-blue-600 border-b-2 border-blue-600">Tier 1</button>
-          <button class="tab-btn px-6 py-3 font-medium text-gray-500 hover:text-blue-600 transition-colors">Tier 2</button>
-          <button class="tab-btn px-6 py-3 font-medium text-gray-500 hover:text-blue-600 transition-colors">Tier 3</button>
-        </div>
+		<div class="mb-4 overflow-hidden rounded-lg bg-white shadow-md">
+			<div class="p-6">
+				<div class="mb-6 flex border-b border-gray-200">
+					<button
+						class="default-open tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+						onclick={(evt) => openTab(evt, 'Introduction to Phishing')}
+						>Introduction to Phishing</button
+					>
+					<button
+						class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+						onclick={(evt) => openTab(evt, 'Types of Phishing')}>Types of Phishing</button
+					>
+					<button
+						class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+						onclick={(evt) => openTab(evt, 'Recognizing Phishing Attempts')}
+						>Recognizing Phishing Attempts</button
+					>
+					<button
+						class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+						onclick={(evt) => openTab(evt, 'How Phishing Works')}>How Phishing Works</button
+					>
+					<button
+						class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+						onclick={(evt) => openTab(evt, 'Protection Strategies')}>Protection Strategies</button
+					>
+					<button
+						class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+						onclick={(evt) => openTab(evt, 'Examples of Phishing Emails and Websites')}
+						>Examples of Phishing Emails and Websites</button
+					>
+					<button
+						class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+						onclick={(evt) => openTab(evt, 'Response to Phishing')}>Response to Phishing</button
+					>
+					<button
+						class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+						onclick={(evt) => openTab(evt, 'Recap and Key Takeaways')}
+						>Recap and Key Takeaways</button
+					>
+					<button
+						class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+						onclick={(evt) => openTab(evt, 'Test Your Knowledge')}>Test Your Knowledge</button
+					>
+				</div>
 
-        <!-- Tier 1 Content -->
-        <div id="tier-1" class="tab-content block">
-          <h3 class="text-xl font-semibold mb-2">London</h3>
-          <p class="text-gray-600">London is the capital city of England.</p>
-        </div>
+				<div id="Introduction to Phishing" class="tab-content">
+					<h3 class="mb-2 text-xl font-semibold">Introduction to Phishing</h3>
+					<p class="text-gray-600">London is the capital city of England.</p>
+				</div>
 
-        <!-- Tier 2 Content -->
-        <div id="tier-2" class="tab-content hidden">
-          <h3 class="text-xl font-semibold mb-2">Paris</h3>
-          <p class="text-gray-600">Paris is the capital of France.</p>
-        </div>
+				<div id="Types of Phishing" class="tab-content">
+					<h3 class="mb-2 text-xl font-semibold">Types of Phishing</h3>
+					<p class="text-gray-600">Paris is the capital of France.</p>
+				</div>
 
-        <!-- Tier 3 Content (Nested) -->
-        <div id="tier-3" class="tab-content hidden">
-          <div class="bg-gray-50 p-4 rounded-lg">
-            <!-- Nested Tabs -->
-            <div class="flex space-x-2 mb-4 bg-gray-200 p-1 rounded-md w-max">
-              <button class="nested-btn px-4 py-2 bg-white shadow-sm rounded text-sm font-medium">London</button>
-              <button class="nested-btn px-4 py-2 hover:bg-white/50 rounded text-sm font-medium transition-all">Paris</button>
-              <button class="nested-btn px-4 py-2 hover:bg-white/50 rounded text-sm font-medium transition-all">Tokyo</button>
-            </div>
+				<div id="Recognizing Phishing Attempts" class="tab-content">
+					<h3 class="mb-2 text-xl font-semibold">Recognizing Phishing Attempts</h3>
+					<p class="text-gray-600">Tokyo is the capital of Japan.</p>
+				</div>
 
-            <div id="test-1" class="nested-content block">
-              <h3 class="text-lg font-bold">Test 1</h3>
-              <p class="text-gray-600">Test 1 Text</p>
-            </div>
+				<div id="How Phishing Works" class="tab-content">
+					<h3 class="mb-2 text-xl font-semibold">How Phishing Works</h3>
+					<p class="text-gray-600">Tokyo is the capital of Japan.</p>
+				</div>
 
-            <div id="test-2" class="nested-content hidden">
-              <h3 class="text-lg font-bold">Test 2</h3>
-              <p class="text-gray-600">Test 2 Text</p>
-            </div>
+				<div id="Protection Strategies" class="tab-content">
+					<h3 class="mb-2 text-xl font-semibold">Protection Strategies</h3>
+					<p class="text-gray-600">Tokyo is the capital of Japan.</p>
+				</div>
 
-            <div id="test-3" class="nested-content hidden">
-              <h3 class="text-lg font-bold">Test 3</h3>
-              <p class="text-gray-600">Test 3 Text</p>
-            </div>
-          </div>
-        </div>
+				<div id="Examples of Phishing Emails and Websites" class="tab-content">
+					<h3 class="mb-2 text-xl font-semibold">Examples of Phishing Emails and Websites</h3>
+					<p class="text-gray-600">Tokyo is the capital of Japan.</p>
+				</div>
 
-      </div>
-    </div>
-  </div>
+				<div id="Response to Phishing" class="tab-content">
+					<h3 class="mb-2 text-xl font-semibold">Response to Phishing</h3>
+					<p class="text-gray-600">Tokyo is the capital of Japan.</p>
+				</div>
+
+				<div id="Recap and Key Takeaways" class="tab-content">
+					<h3 class="mb-2 text-xl font-semibold">Recap and Key Takeaways</h3>
+					<p class="text-gray-600">Tokyo is the capital of Japan.</p>
+				</div>
+				<div id="Test Your Knowledge" class="tab-content">
+					<h3 class="mb-2 text-xl font-semibold">Test Your Knowledge</h3>
+				</div>
+			</div>
+		</div>
+	</div>
 </main>
 
-<!-- <script>
-// @ts-nocheck
+<style>
+	.tab-content {
+		display: none;
+	}
+</style>
 
-  // Simple function to handle main tabs
-  function openTab(evt, tabName) {
-    const contents = document.querySelectorAll('.tab-content');
-    contents.forEach(content => content.classList.add('hidden'));
-    
-    const buttons = document.querySelectorAll('.tab-btn');
-    buttons.forEach(btn => {
-        btn.classList.remove('border-blue-600', 'text-blue-600', 'border-b-2');
-        btn.classList.add('text-gray-500');
-    });
+<script lang="ts">
+  import { openTab } from "$lib/scripts/slideTabs";
+  import { onMount } from "svelte";
 
-    document.getElementById(tabName).classList.remove('hidden');
-    evt.currentTarget.classList.add('border-blue-600', 'text-blue-600', 'border-b-2');
-    evt.currentTarget.classList.remove('text-gray-500');
-  }
-
-  // Simple function to handle nested tabs
-  function openNestedTab(evt, tabName) {
-    const contents = document.querySelectorAll('.nested-content');
-    contents.forEach(content => content.classList.add('hidden'));
-    
-    const buttons = document.querySelectorAll('.nested-btn');
-    buttons.forEach(btn => {
-        btn.classList.remove('bg-white', 'shadow-sm');
-    });
-
-    document.getElementById(tabName).classList.remove('hidden');
-    evt.currentTarget.classList.add('bg-white', 'shadow-sm');
-  }
-</script> -->
-
-
-
-  <!-- <script>
-    function openCity(evt, tabElementId) {
-      var i, tabcontent, tablinks;
-
-      tabButtonParentNodes = evt.currentTarget.parentNode.querySelectorAll(":scope > .tablinks");
-      tabButtonParentNodes.forEach((el) => {
-        el.className = el.className.replace(" active", "");
-      });
-
-      evt.currentTarget.className += " active";
-
-      tabElement = document.getElementById(tabElementId);
-      tabElement.style.display = "block";
-
-      tabElementContainer = tabElement.parentNode;
-      nestedTabs = tabElementContainer.querySelectorAll(":scope > .tabcontent");
-
-      nestedTabs.forEach((el) => {
-        if (el.id != tabElementId) {
-          el.style.display = "none";
-        }
-      });
-    }
-
-  [].forEach.call(document.getElementsByClassName("defaultOpen"), el => el.click());
-
-  </script>
-
-</body>
-
-
-
-</html> -->
+  onMount(() => {
+	Array.prototype.forEach.call(document.getElementsByClassName('default-open'), (el) => {
+		(el as HTMLElement).click();
+	});
+  });
+</script>
