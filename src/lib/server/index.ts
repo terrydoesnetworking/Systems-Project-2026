@@ -1,41 +1,23 @@
-import 'dotenv/config';
-import { drizzle } from 'drizzle-orm/libsql';
-import { eq } from 'drizzle-orm';
-import { usersTable } from './db/schema';
+// import 'dotenv/config';
+// import { drizzle } from 'drizzle-orm/node-postgres';
+// //import { eq } from 'drizzle-orm';
+// import { usersTable } from './db/schema';
 
-const db = drizzle(process.env.DB_FILE_NAME!);
+// const db = drizzle(process.env.DATABASE_URL!);
+// const users = await db.select().from(usersTable);
+// console.log('Getting all users from the database: ', users)
 
-async function main() {
-  const user: typeof usersTable.$inferInsert = {
-    name: 'John',
-    age: 30,
-    email: 'john@example.com',
-  };
+// export { db };
 
-  await db.insert(usersTable).values(user);
-  console.log('New user created!')
+// src/lib/server/db/index.ts
 
-  const users = await db.select().from(usersTable);
-  console.log('Getting all users from the database: ', users)
-  /*
-  const users: {
-    id: number;
-    name: string;
-    age: number;
-    email: string;
-  }[]
-  */
+import { drizzle } from "drizzle-orm/node-postgres";
+import pkg from "pg";
 
-  await db
-    .update(usersTable)
-    .set({
-      age: 31,
-    })
-    .where(eq(usersTable.email, user.email));
-  console.log('User info updated!')
+const { Pool } = pkg;
 
-  await db.delete(usersTable).where(eq(usersTable.email, user.email));
-  console.log('User deleted!')
-}
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+});
 
-main();
+export const db = drizzle(pool);
