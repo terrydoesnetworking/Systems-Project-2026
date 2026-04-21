@@ -97,8 +97,25 @@
   };
 </script> -->
 
+<h1 class="big-text">
+  Lucky for you, we are NOT <span style="color: red">hackers</span>! For
+  more information, consider looking through this website to learn more
+  on how to protect your self from losing your information.
+</h1>
+<h2 class="small-text">
+  Click the buttons to navigate to our other pages.
+</h2>
+
+<div class="button-container" class:vertical={isVertical}>
+  <a href="/"><button>Home</button></a>
+  <a href="/quiz"><button>Quiz</button></a>
+  <a href="/slides"><button>Slides</button></a>
+</div>
 
 <script>
+
+  let isVertical = false;
+
   let showPopup = $state(true);
 
   function accept() {
@@ -117,6 +134,40 @@
 {/if}
 
 <style>
+
+  .big-text {
+        font-size: 50px;
+        text-align: center;
+      }
+
+  .small-text {
+    font-size: 25px;
+    text-align: center;
+    color: grey;
+  }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    margin-top: 120px; 
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: 4px solid rgb(10, 25, 50); /* 👈 outline */
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .vertical {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .overlay {
     position: fixed;
     top: 0;
