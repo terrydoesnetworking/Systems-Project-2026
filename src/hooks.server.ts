@@ -1,32 +1,93 @@
-import { sequence } from '@sveltejs/kit/hooks';
-import { building } from '$app/environment';
-import { auth } from '$lib/server/auth';
-import { svelteKitHandler } from 'better-auth/svelte-kit';
+//import PostgreSQL from '$lib/'
 import type { Handle } from '@sveltejs/kit';
-import { getTextDirection } from '$lib/paraglide/runtime.js';
-import { paraglideMiddleware } from '$lib/paraglide/server.js';
+import { redirect } from '@sveltejs/kit';
 
-const handleParaglide: Handle = ({ event, resolve }) =>
-	paraglideMiddleware(event.request, ({ request, locale }) => {
-		event.request = request;
+import { db } from '$lib/server/index.ts';
+import {
+  usersTable,
+  sessionsTable
+} from '$lib/server/db/schema';
 
-		return resolve(event, {
-			transformPageChunk: ({ html }) =>
-				html
-					.replace('%paraglide.lang%', locale)
-					.replace('%paraglide.dir%', getTextDirection(locale))
-		});
-	});
+import { eq } from 'drizzle-orm';
 
-const handleBetterAuth: Handle = async ({ event, resolve }) => {
-	const session = await auth.api.getSession({ headers: event.request.headers });
+export const handle: Handle = async ({ event, resolve }) => {
 
-	if (session) {
-		event.locals.session = session.session;
-		event.locals.user = session.user;
-	}
+  //
+  // 1 — Get session cookie
+  //
 
-	return svelteKitHandler({ event, resolve, auth, building });
+  const sessionId = event.cookies.get('session');
+
+  if (sessionId) {
+
+    //
+    // 2 — Find session
+    //
+
+    const session = await db.query.sessionsTable.findFirst({
+      where: eq(sessionsTable.id, sessionId)
+    });
+
+    if (!session) {
+      event.cookies.delete('session', {
+        path: '/'
+      });
+    }else{
+
+      
+
+      if (session.expiresAt > new Date()) {
+
+        //
+        // 4 — Load user
+        //
+
+        const user = await db.query.usersTable.findFirst({
+          where: eq(usersTable.id, session.userId)
+        });
+
+        if (user) {
+          event.locals.user = user;
+        }
+
+      } else {
+
+        //
+        // Session expired
+        //
+
+        event.cookies.delete('session', {
+          path: '/'
+        });
+
+      }
+
+    }
+
+  }
+
+  //
+  // 5 — Protect routes
+  //
+
+  const protectedRoutes = [
+    //'/dashboard',
+    '/slides',
+    '/quiz'
+  ];
+
+  const isProtected = protectedRoutes.some((route) =>
+    event.url.pathname.startsWith(route)
+  );
+
+  if (isProtected && !event.locals.user) {
+    throw redirect(303, '/login');
+  }
+
+  //
+  // 6 — Continue request
+  //
+
+  return resolve(event);
+
 };
-
-export const handle: Handle = sequence(handleParaglide, handleBetterAuth);

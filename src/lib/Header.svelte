@@ -2,7 +2,7 @@
   <div class="flex items-center justify-between px-4 py-2 flex-wrap">
     
     <!-- Logo -->
-    <img src="/Logo.svg" alt="Logo" class="w-full max-w-[150px] inline-block align-top py-1 text-xl mr-4 h-auto">
+    <img src="/Logo.svg" alt="Logo" class="w-full max-w-37.5 inline-block align-top py-1 text-xl mr-4 h-auto">
 
     <!-- Toggler/Button for Mobile -->
     <button class="block lg:hidden px-3 py-2 border rounded border-gray-300 text-gray-600 hover:bg-gray-200" type="button" aria-label="Toggle navigation">
