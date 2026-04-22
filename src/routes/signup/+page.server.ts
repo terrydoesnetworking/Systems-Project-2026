@@ -64,7 +64,7 @@ export const actions = {
 
   if (err?.status === 303) {
     
-    console.log("something went wrong");
+    //console.log("something went wrong");
     
     throw err;
   
