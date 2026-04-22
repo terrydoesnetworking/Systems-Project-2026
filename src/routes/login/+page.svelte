@@ -1,3 +1,4 @@
+<main class="min-h-[75vh] bg-gray-50 py-8">
 <script lang="ts">
   import { enhance } from '$app/forms';
 </script>
