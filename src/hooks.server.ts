@@ -28,11 +28,13 @@ export const handle: Handle = async ({ event, resolve }) => {
       where: eq(sessionsTable.id, sessionId)
     });
 
-    if (session) {
+    if (!session) {
+      event.cookies.delete('session', {
+        path: '/'
+      });
+    }else{
 
-      //
-      // 3 — Check expiration
-      //
+      
 
       if (session.expiresAt > new Date()) {
 

@@ -1,17 +1,23 @@
 import { fail, redirect } from '@sveltejs/kit';
 import { db } from '$lib/server/index.ts';
-import { usersTable, sessionsTable } from '$lib/server/db/schema';
+import { usersTable, sessionsTable } from '$lib/server/db/schema.ts';
 import { eq } from 'drizzle-orm';
 import { randomUUID } from 'crypto';
 import bcrypt from 'bcrypt';
 
 export const actions = {
   default: async ({ request, cookies }) => {
-    //console.log(request);
+    
+    // console.log("request varible");
+    // console.log(request);
+    // console.log("cookies varible");
+    // console.log(cookies);
     console.log("Start of function");
 
     const data = await request.formData();
-    console.log(data);
+    
+    //console.log(data);
+    
     const email = data.get('Email')?.toString();
     const password = data.get('password')?.toString();
 
@@ -23,25 +29,34 @@ export const actions = {
     const user = await db.query.usersTable.findFirst({
       where: eq(usersTable.email, email),
     });
-
+    
+    console.log("Completed email check on database");
+    
     if (!user) {
         console.log("if statement checking for existing users");
         return fail(401, { message: 'Invalid login' });
     }
     const valid = await bcrypt.compare(password, user.passwordHash);
+    
+    console.log("if statement checking for vaildity");
 
     if (!valid) {
-        console.log("if statement checking for vaildity");
+        
         return fail(401, { message: 'Invalid login' });
     }
 
     const sessionId = randomUUID();
-
+    
+    console.log(sessionId);
+    console.log("start of database session lookup...");
+    
     await db.insert(sessionsTable).values({
       id: sessionId,
       userId: user.id,
       expiresAt: new Date(Date.now() + 1000 * 60 * 60 * 24 * 7), 
     });
+
+
 
     cookies.set('session', sessionId, {
       path: '/',

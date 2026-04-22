@@ -14,6 +14,7 @@
 import 'dotenv/config';
 import { drizzle } from "drizzle-orm/node-postgres";
 import pkg from "pg";
+import * as schema from './db/schema.ts';
 
 const { Pool } = pkg;
 
@@ -28,7 +29,9 @@ const pool = globalForDb.pool ??
 
 globalForDb.pool = pool;
 
-export const db = drizzle(pool);
+export const db = drizzle(pool, { 
+  schema,
+ });
 
 console.log("DATABASE_URL:", process.env.DATABASE_URL);
 console.log("TYPE:", typeof process.env.DATABASE_URL);

@@ -18,6 +18,8 @@ export const actions = {
     const email = data.get('email')?.toString();
     const password = data.get('password')?.toString();
 
+    console.log("checking for input in all fields");
+
     if (!name || !email || !password) {
       return fail(400, {
         message: 'All fields are required'
@@ -29,34 +31,47 @@ export const actions = {
     //
 
     const passwordHash = await bcrypt.hash(password, 10);
-
+    
+    console.log("password hash");
+    console.log(password);
+    
     //
     // 2 — Insert user
     //
 
     try {
 
-  await db.insert(usersTable).values({
-    name,
-    email,
-    passwordHash
-  });
+      console.log("attempt to insert user into database");
+
+      await db.insert(usersTable).values({
+      name,
+      email,
+      passwordHash
+
+    });
+
+  console.log("Signup successful, time to login to verify");
 
   throw redirect(303, '/login');
 
 } catch (err: any) {
 
 
-//
-// VERY IMPORTANT
-// Let redirects pass through
-//
+  //
+  // VERY IMPORTANT
+  // Let redirects pass through
+  //
 
-if (err?.status === 303) {
-  throw err;
+  if (err?.status === 303) {
+    
+    console.log("something went wrong");
+    
+    throw err;
+  
   }
 
   console.error(err);
+  
 
 
   //
@@ -64,9 +79,13 @@ if (err?.status === 303) {
   //
 
   if (err.code === '23505') {
+
+    console.log("email exists already");
+
     return fail(400, {
       error: 'Email already exists'
     });
+
   }
 
   return fail(500, {
@@ -75,37 +94,35 @@ if (err?.status === 303) {
 
 }
 
-    //
-    // 3 — Create session
-    //
+    // console.log("just here to make sure the code is reached: beginning");
 
-    const sessionId = randomUUID();
+    // const sessionId = randomUUID();
 
-    await db.insert(sessionsTable).values({
-      id: sessionId,
-      userId: user.id,
-      expiresAt: new Date(
-        Date.now() + 1000 * 60 * 60 * 24 * 7
-      ) // 7 days
-    });
+    // await db.insert(sessionsTable).values({
+    //   id: sessionId,
+    //   userId: user.id,
+    //   expiresAt: new Date(
+    //     Date.now() + 1000 * 60 * 60 * 24 * 7
+    //   ) // 7 days
+    // });
 
-    //
-    // 4 — Set cookie
-    //
+    // //
+    // // 4 — Set cookie
+    // //
 
-    cookies.set('session', sessionId, {
-      path: '/',
-      httpOnly: true,
-      sameSite: 'strict',
-      secure: false, // true in production
-      maxAge: 60 * 60 * 24 * 7
-    });
+    // cookies.set('session', sessionId, {
+    //   path: '/',
+    //   httpOnly: true,
+    //   sameSite: 'strict',
+    //   secure: false, // true in production
+    //   maxAge: 60 * 60 * 24 * 7
+    // });
 
-    //
-    // 5 — Redirect
-    //
+    // //
+    // // 5 — Redirect
+    // //
 
-    throw redirect(303, '/');
+    // throw redirect(303, '/');
 
   }
 };

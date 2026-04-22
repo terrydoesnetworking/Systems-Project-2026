@@ -1,4 +1,5 @@
 import { integer, pgTable, varchar, timestamp } from "drizzle-orm/pg-core";
+import { db } from "../index.ts";
 
 export const usersTable = pgTable("users", {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
