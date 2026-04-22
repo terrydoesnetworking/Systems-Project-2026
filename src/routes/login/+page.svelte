@@ -1,10 +1,9 @@
-<!-- <main class="min-h-[75vh] bg-gray-50 py-8"> -->
 <script lang="ts">
   import { enhance } from '$app/forms';
 </script>
 
 
-<main class="min-h-screen bg-gray-50 py-8">
+<main class="min-h-[75vh] bg-gray-50 py-8">
   <div class="container mx-auto px-4">
     <h1 class="text-center text-3xl font-bold mt-4 mb-8 text-gray-800">Login</h1>
     
