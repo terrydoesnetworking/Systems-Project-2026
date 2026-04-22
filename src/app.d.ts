@@ -5,14 +5,15 @@ import type { User, Session } from 'better-auth/minimal';
 declare global {
 	namespace App {
 		interface Locals {
-			user?: User;
-			session?: Session;
+			// user?: User;
+			// session?: Session;
+			user: typeof usersTable.$inferSelect | null;
 		}
 
-		// interface Error {}
-		// interface PageData {}
-		// interface PageState {}
-		// interface Platform {}
+		interface Error {}
+		interface PageData {}
+		interface PageState {}
+		interface Platform {}
 	}
 }
 
