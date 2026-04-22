@@ -1,3 +1,8 @@
+<script lang="ts">
+  import { enhance } from '$app/forms';
+</script>
+
+
 <main class="min-h-screen bg-gray-50 py-8">
   <div class="container mx-auto px-4">
     <h1 class="text-center text-3xl font-bold mt-4 mb-8 text-gray-800">Login</h1>
@@ -9,18 +14,18 @@
         <!-- Card container -->
         <div class="bg-white rounded-lg shadow-md border border-gray-200 mb-12">
           <div class="p-6">
-            <form>
+            <form method="POST" use:enhance>
               <!-- Username Field -->
               <div class="mb-4">
-                <label for="username" class="block text-sm font-medium text-gray-700 mb-1">
-                  Username
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
+                  Email
                 </label>
                 <input 
                   type="text" 
-                  id="username" 
+                  name="Email" 
                   required 
                   class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                >
+                />
               </div>
 
               <!-- Password Field -->
@@ -30,10 +35,10 @@
                 </label>
                 <input 
                   type="password" 
-                  id="password" 
+                  name="password" 
                   required 
                   class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                >
+                />
               </div>
 
               <!-- Submit Button -->

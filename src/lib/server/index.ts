@@ -11,13 +11,24 @@
 
 // src/lib/server/db/index.ts
 
+import 'dotenv/config';
 import { drizzle } from "drizzle-orm/node-postgres";
 import pkg from "pg";
 
 const { Pool } = pkg;
 
-const pool = new Pool({
+const globalForDb = globalThis as unknown as {
+  pool?: typeof pool;
+};
+
+const pool = globalForDb.pool ?? 
+  new Pool ({
   connectionString: process.env.DATABASE_URL,
 });
 
+globalForDb.pool = pool;
+
 export const db = drizzle(pool);
+
+console.log("DATABASE_URL:", process.env.DATABASE_URL);
+console.log("TYPE:", typeof process.env.DATABASE_URL);
