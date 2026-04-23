@@ -49,7 +49,8 @@
 
 				<div id="Introduction to Phishing" class="tab-content">
 					<h3 class="mb-2 text-xl font-semibold">Introduction to Phishing</h3>
-					<p class="text-gray-600">London is the capital city of England.</p>
+					<p class="text-gray-600">    • Definition: Phishing is a cyberattack where attackers pose as legitimate entities to steal sensitive information.
+    • Common targets: Emails, messages, or websites.</p>
 				</div>
 
 				<div id="Types of Phishing" class="tab-content">
