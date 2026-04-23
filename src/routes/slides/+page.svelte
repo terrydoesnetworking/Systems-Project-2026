@@ -47,7 +47,7 @@
 					>
 				</div>
 
-				<<div id="Introduction to Phishing" class="tab-content">
+				<div id="Introduction to Phishing" class="tab-content">
     <h3 class="mb-2 text-xl font-semibold">Introduction to Phishing</h3>
 
     <ul class="list-disc list-inside text-gray-600 space-y-1">
