@@ -56,58 +56,79 @@
     </ul>
 </div>
 
-				<div id="Types of Phishing" class="tab-content">
-					<h3 class="mb-2 text-xl font-semibold">Types of Phishing</h3>
-					<p class="text-gray-600">• Email phishing: Mass emails that appear legitimate.
-    • Spear phishing: Targeted attacks aimed at specific individuals or organizations.
-    • Clone phishing: A legitimate email that is cloned and altered with malicious links.
-    • Vishing and Smishing: Voice and text message phishing.</p>
-				</div>
+<div id="Types of Phishing" class="tab-content">
+    <h3 class="mb-2 text-xl font-semibold">Types of Phishing</h3>
 
-				<div id="Recognizing Phishing Attempts" class="tab-content">
-					<h3 class="mb-2 text-xl font-semibold">Recognizing Phishing Attempts</h3>
-					<p class="text-gray-600">    • Suspicious email addresses or domain names.
-    • Greeting is generic (e.g., "Dear Customer").
-    • Urgent or threatening tone.
-    • Poor grammar and spelling.
-    • Unusual attachments or links, especially .exe files.</p>
-				</div>
+    <ul class="list-disc list-inside text-gray-600 space-y-1">
+        <li><strong>Email phishing:</strong> Mass emails that appear legitimate.</li>
+        <li><strong>Spear phishing:</strong> Targeted attacks aimed at specific individuals or organizations.</li>
+        <li><strong>Clone phishing:</strong> A legitimate email that is cloned and altered with malicious links.</li>
+        <li><strong>Vishing and Smishing:</strong> Voice and text message phishing.</li>
+    </ul>
+</div>
 
-				<div id="How Phishing Works" class="tab-content">
-					<h3 class="mb-2 text-xl font-semibold">How Phishing Works</h3>
-					<p class="text-gray-600">    • Exploiting trust to deceive targets.
-    • Collecting confidential information (username, passwords, credit card numbers).
-    • Often leads to further attacks like installing malware.</p>
-				</div>
+<div id="Recognizing Phishing Attempts" class="tab-content">
+    <h3 class="mb-2 text-xl font-semibold">Recognizing Phishing Attempts</h3>
 
-				<div id="Protection Strategies" class="tab-content">
-					<h3 class="mb-2 text-xl font-semibold">Protection Strategies</h3>
-					<p class="text-gray-600">    • Always check the source.
-    • Hover over links before clicking to check the URL.
-    • Verify the sender's email or message through another communication channel.
-    • Use anti-phishing software and keep it updated.
-    • Educate and train regularly on new phishing tactics.</p>
-				</div>
+    <ul class="list-disc list-inside text-gray-600 space-y-1">
+        <li>Suspicious email addresses or domain names.</li>
+        <li>Generic greetings (e.g., "Dear Customer").</li>
+        <li>Urgent or threatening tone.</li>
+        <li>Poor grammar and spelling.</li>
+        <li>Unusual attachments or links, especially .exe files.</li>
+    </ul>
+</div>
 
-				<div id="Examples of Phishing Emails and Websites" class="tab-content">
-					<h3 class="mb-2 text-xl font-semibold">Examples of Phishing Emails and Websites</h3>
-					<p class="text-gray-600"> We need to insert pictures here. :-O </p>
-				</div>
+<div id="How Phishing Works" class="tab-content">
+    <h3 class="mb-2 text-xl font-semibold">How Phishing Works</h3>
 
-				<div id="Response to Phishing" class="tab-content">
-					<h3 class="mb-2 text-xl font-semibold">Response to Phishing</h3>
-					<p class="text-gray-600">    • Report any suspicious emails to IT/security department immediately.
-    • Do not click on links or download attachments.
-    • Delete the phishing message.
-    • Change passwords if you suspect information was leaked.</p>
-				</div>
+    <ul class="list-disc list-inside text-gray-600 space-y-1">
+        <li>Exploiting trust to deceive targets.</li>
+        <li>Collecting confidential information (usernames, passwords, credit cards).</li>
+        <li>Often leads to further attacks like malware installation.</li>
+    </ul>
+</div>
 
-				<div id="Recap and Key Takeaways" class="tab-content">
-					<h3 class="mb-2 text-xl font-semibold">Recap and Key Takeaways</h3>
-					<p class="text-gray-600">    • Stay vigilant and informed.
-    • Security is a shared responsibility.
-    • Continuous learning is necessary to counteract evolving threats.</p>
-				</div>
+<div id="Protection Strategies" class="tab-content">
+    <h3 class="mb-2 text-xl font-semibold">Protection Strategies</h3>
+
+    <ul class="list-disc list-inside text-gray-600 space-y-1">
+        <li>Always check the source.</li>
+        <li>Hover over links before clicking to verify URLs.</li>
+        <li>Verify sender identity through another communication channel.</li>
+        <li>Use updated anti-phishing software.</li>
+        <li>Stay trained on new phishing tactics.</li>
+    </ul>
+</div>
+
+<div id="Examples of Phishing Emails and Websites" class="tab-content">
+    <h3 class="mb-2 text-xl font-semibold">Examples of Phishing Emails and Websites</h3>
+
+    <p class="text-gray-600">
+        We need to insert pictures here. :-O
+    </p>
+</div>
+
+<div id="Response to Phishing" class="tab-content">
+    <h3 class="mb-2 text-xl font-semibold">Response to Phishing</h3>
+
+    <ul class="list-disc list-inside text-gray-600 space-y-1">
+        <li>Report suspicious emails to IT/security immediately.</li>
+        <li>Do not click links or download attachments.</li>
+        <li>Delete phishing messages.</li>
+        <li>Change passwords if compromise is suspected.</li>
+    </ul>
+</div>
+
+<div id="Recap and Key Takeaways" class="tab-content">
+    <h3 class="mb-2 text-xl font-semibold">Recap and Key Takeaways</h3>
+
+    <ul class="list-disc list-inside text-gray-600 space-y-1">
+        <li>Stay vigilant and informed.</li>
+        <li>Security is a shared responsibility.</li>
+        <li>Continuous learning is necessary to counter evolving threats.</li>
+    </ul>
+</div>
 				<div id="Test Your Knowledge" class="tab-content">
 					<h3 class="mb-2 text-xl font-semibold">Test Your Knowledge</h3>
 				</div>
