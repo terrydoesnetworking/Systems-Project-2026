@@ -4,7 +4,7 @@
 
 		<div class="mb-4 overflow-hidden rounded-lg bg-white shadow-md">
 			<div class="p-6">
-				<div class="mb-6 flex border-b border-gray-200">
+				<div class="mb-6 overflow-x-auto flex border-b border-gray-200">
 					<button
 						class="default-open tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
 						onclick={(evt) => openTab(evt, 'Introduction to Phishing')}
