@@ -47,11 +47,14 @@
 					>
 				</div>
 
-				<div id="Introduction to Phishing" class="tab-content">
-					<h3 class="mb-2 text-xl font-semibold">Introduction to Phishing</h3>
-					<p class="text-gray-600">    • Definition: Phishing is a cyberattack where attackers pose as legitimate entities to steal sensitive information.
-    • Common targets: Emails, messages, or websites.</p>
-				</div>
+				<<div id="Introduction to Phishing" class="tab-content">
+    <h3 class="mb-2 text-xl font-semibold">Introduction to Phishing</h3>
+
+    <ul class="list-disc list-inside text-gray-600 space-y-1">
+        <li><strong>Definition:</strong> Phishing is a cyberattack where attackers pose as legitimate entities to steal sensitive information.</li>
+        <li><strong>Common targets:</strong> Emails, messages, or websites.</li>
+    </ul>
+</div>
 
 				<div id="Types of Phishing" class="tab-content">
 					<h3 class="mb-2 text-xl font-semibold">Types of Phishing</h3>
