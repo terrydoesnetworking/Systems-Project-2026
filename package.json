@@ -79,9 +79,11 @@
 	],
 	"dependencies": {
 		"@libsql/client": "^0.17.2",
+		"@neondatabase/serverless": "^1.1.0",
 		"bcrypt": "^6.0.0",
 		"dotenv": "^17.4.2",
 		"drizzle-orm": "^0.45.2",
-		"pg": "^8.20.0"
+		"pg": "^8.20.0",
+		"vercel": "^52.0.0"
 	}
 }
