@@ -28,7 +28,7 @@
 					>
 					<button
 						class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
-						onclick={(evt) => openTab(evt, 'Module 2')}>Module 2: Cybersecurity Essentials</button
+						onclick={(evt) => openTab(evt, 'Module 2')}>Module 2: Consequences Of Phishing</button
 					>
 					<button
 						class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
@@ -177,13 +177,277 @@
 						</ul>
 					</div>
 				</div>
+<div id="Module 2" class="tab-content">
+	<div class="mb-6 flex overflow-x-auto border-b border-gray-200">
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M2 Intro')}>Introduction</button>
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M2 Financial')}>Financial Loss</button>
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M2 Data')}>Data Breaches</button>
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M2 Identity')}>Identity Theft</button>
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M2 Reputation')}>Reputation</button>
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M2 Legal')}>Legal</button>
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M2 Operations')}>Operations</button>
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M2 Psychological')}>Psychological</button>
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M2 Summary')}>Summary</button>
+	</div>
 
-				<div id="Module 2" class="tab-content"></div>
+	<div id="M2 Intro" class="tab-content">
+		<h3 class="text-xl font-semibold">Introduction</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>Phishing tricks users into revealing sensitive information.</li>
+			<li>Common methods include emails, fake websites, and texts.</li>
+			<li>Understanding consequences helps prevention.</li>
+		</ul>
+	</div>
 
-				<div id="Module 3" class="tab-content"></div>
+	<div id="M2 Financial" class="tab-content">
+		<h3 class="text-xl font-semibold">Financial Loss</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>Direct theft from accounts.</li>
+			<li>Costly recovery.</li>
+			<li>Businesses may lose large sums.</li>
+		</ul>
+	</div>
 
-				<div id="Module 4" class="tab-content"></div>
+	<div id="M2 Data" class="tab-content">
+		<h3 class="text-xl font-semibold">Data Breaches</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>Access to sensitive data.</li>
+			<li>Data sold on dark web.</li>
+			<li>Long-term risks.</li>
+		</ul>
+	</div>
 
+	<div id="M2 Identity" class="tab-content">
+		<h3 class="text-xl font-semibold">Identity Theft</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>Fraud using stolen identity.</li>
+			<li>Credit damage.</li>
+			<li>Legal issues.</li>
+		</ul>
+	</div>
+
+	<div id="M2 Reputation" class="tab-content">
+		<h3 class="text-xl font-semibold">Reputational Damage</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>Loss of trust.</li>
+			<li>Negative publicity.</li>
+			<li>Brand impact.</li>
+		</ul>
+	</div>
+
+	<div id="M2 Legal" class="tab-content">
+		<h3 class="text-xl font-semibold">Legal Consequences</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>Fines and penalties.</li>
+			<li>Regulation violations.</li>
+			<li>Lawsuits.</li>
+		</ul>
+	</div>
+
+	<div id="M2 Operations" class="tab-content">
+		<h3 class="text-xl font-semibold">Operational Disruption</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>Downtime.</li>
+			<li>Lost productivity.</li>
+			<li>Recovery costs.</li>
+		</ul>
+	</div>
+
+	<div id="M2 Psychological" class="tab-content">
+		<h3 class="text-xl font-semibold">Psychological Impact</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>Stress and anxiety.</li>
+			<li>Loss of trust.</li>
+			<li>Fear of future attacks.</li>
+		</ul>
+	</div>
+
+	<div id="M2 Summary" class="tab-content">
+		<h3 class="text-xl font-semibold">Summary</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>Financial, legal, and reputational damage.</li>
+			<li>Affects individuals and businesses.</li>
+			<li>Prevention is critical.</li>
+		</ul>
+	</div>
+</div>
+
+				
+<div id="Module 3" class="tab-content">
+	<div class="mb-6 flex overflow-x-auto border-b border-gray-200">
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M3 Intro')}>Intro</button>
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M3 Strong')}>Strong Passwords</button>
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M3 Mistakes')}>Mistakes</button>
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M3 MFA')}>MFA</button>
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M3 Managers')}>Managers</button>
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M3 Tips')}>Tips</button>
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M3 Recap')}>Recap</button>
+	</div>
+
+	<div id="M3 Intro" class="tab-content">
+		<h3>Password Security</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>First line of defense.</li>
+			<li>Weak passwords risk compromise.</li>
+			<li>Strong authentication protects data.</li>
+		</ul>
+	</div>
+
+	<div id="M3 Strong" class="tab-content">
+		<h3>Strong Passwords</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>12+ characters.</li>
+			<li>Mix of characters.</li>
+			<li>No personal info.</li>
+			<li>Use passphrases.</li>
+		</ul>
+	</div>
+
+	<div id="M3 Mistakes" class="tab-content">
+		<h3>Common Mistakes</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>Reusing passwords.</li>
+			<li>Simple passwords.</li>
+			<li>Sharing credentials.</li>
+			<li>Writing them down insecurely.</li>
+		</ul>
+	</div>
+
+	<div id="M3 MFA" class="tab-content">
+		<h3>MFA</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>Extra security layer.</li>
+			<li>Multiple verification methods.</li>
+			<li>Reduces unauthorized access.</li>
+		</ul>
+	</div>
+
+	<div id="M3 Managers" class="tab-content">
+		<h3>Password Managers</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>Store passwords securely.</li>
+			<li>Encrypt data.</li>
+			<li>Prevent reuse.</li>
+		</ul>
+	</div>
+
+	<div id="M3 Tips" class="tab-content">
+		<h3>Protection Tips</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>Enable MFA.</li>
+			<li>Avoid public devices.</li>
+			<li>Log out.</li>
+			<li>Change compromised passwords.</li>
+		</ul>
+	</div>
+
+	<div id="M3 Recap" class="tab-content">
+		<h3>Recap</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>Strong, unique passwords.</li>
+			<li>No reuse.</li>
+			<li>MFA is essential.</li>
+		</ul>
+	</div>
+</div>
+
+<div id="Module 4" class="tab-content">
+	<div class="mb-6 flex overflow-x-auto border-b border-gray-200">
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M4 Intro')}>Intro</button>
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M4 Practices')}>Practices</button>
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M4 Email')}>Email</button>
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M4 Wifi')}>Wi-Fi</button>
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M4 Downloads')}>Downloads</button>
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M4 Signs')}>Warning Signs</button>
+		<button class="tab-btn px-6 py-3 font-medium text-gray-500 transition-colors hover:text-blue-600"
+			onclick={(evt) => openTab(evt, 'M4 Recap')}>Recap</button>
+	</div>
+
+	<div id="M4 Intro" class="tab-content">
+		<h3>Introduction</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>Internet is a major attack surface.</li>
+			<li>Safe browsing reduces risk.</li>
+			<li>Stay cautious.</li>
+		</ul>
+	</div>
+
+	<div id="M4 Practices" class="tab-content">
+		<h3>Safe Practices</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>Trusted sites only.</li>
+			<li>Check HTTPS.</li>
+			<li>Avoid unknown links.</li>
+		</ul>
+	</div>
+
+	<div id="M4 Email" class="tab-content">
+		<h3>Email Safety</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>Verify sender.</li>
+			<li>Avoid attachments.</li>
+			<li>Watch urgency.</li>
+		</ul>
+	</div>
+
+	<div id="M4 Wifi" class="tab-content">
+		<h3>Public Wi-Fi</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>Unsecured networks.</li>
+			<li>Data interception risk.</li>
+			<li>Avoid sensitive actions.</li>
+		</ul>
+	</div>
+
+	<div id="M4 Downloads" class="tab-content">
+		<h3>Download Safety</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>Trusted sources only.</li>
+			<li>No pirated software.</li>
+			<li>Scan files.</li>
+		</ul>
+	</div>
+
+	<div id="M4 Signs" class="tab-content">
+		<h3>Unsafe Website Signs</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>Misspelled URLs.</li>
+			<li>No HTTPS.</li>
+			<li>Too many pop-ups.</li>
+		</ul>
+	</div>
+
+	<div id="M4 Recap" class="tab-content">
+		<h3>Recap</h3>
+		<ul class="list-disc list-inside text-gray-600">
+			<li>Be cautious.</li>
+			<li>Verify sources.</li>
+			<li>Avoid risky behavior.</li>
+		</ul>
+	</div>
+</div>
 				<div id="Module 5" class="tab-content"></div>
 
 				<div id="Test Your Knowledge" class="tab-content">
