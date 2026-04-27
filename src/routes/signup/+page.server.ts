@@ -1,7 +1,8 @@
 import { fail, redirect } from '@sveltejs/kit';
 import bcrypt from 'bcrypt';
-//import { randomUUID } from 'crypto';
-import { db } from '$lib/server/index.ts';
+import { randomUUID } from 'crypto';
+
+import { db } from '$lib/server/auth.ts';
 import {
   usersTable,
   /*sessionsTable*/

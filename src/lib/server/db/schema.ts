@@ -1,8 +1,7 @@
 //import { uuid } from "better-auth";
 //import { sql } from "drizzle-orm";
 import { integer, pgTable, varchar, timestamp } from "drizzle-orm/pg-core";
-// import { db } from "../index.ts";
-// import { text } from "stream/consumers";
+//import { db } from "../auth.ts"
 
 export const usersTable = pgTable("users", {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
