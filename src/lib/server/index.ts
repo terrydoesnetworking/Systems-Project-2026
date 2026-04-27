@@ -15,7 +15,18 @@ import 'dotenv/config';
 import { drizzle } from "drizzle-orm/node-postgres";
 import pkg from "pg";
 import * as schema from './db/schema.ts';
+import { neon } from '@neondatabase/serverless';
 
+const connectionString: string = process.env.DATABASE_URL as string;
+const sql = neon(connectionString);
+
+export async function load() {
+  const response = await sql `SELECT version()`;
+  const { version } = response[0];
+  return {
+    version,
+  };
+}
 const { Pool } = pkg;
 
 const globalForDb = globalThis as unknown as {
@@ -24,12 +35,12 @@ const globalForDb = globalThis as unknown as {
 
 const pool = globalForDb.pool ?? 
   new Pool ({
-  connectionString: process.env.DATABASE_URL,
-});
+   connectionString: process.env.DATABASE_URL,
+ });
 
-globalForDb.pool = pool;
+ globalForDb.pool = pool;
 
-export const db = drizzle(pool, { 
+ export const db = drizzle(pool, { 
   schema,
  });
 
