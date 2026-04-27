@@ -1,12 +1,15 @@
 import { fail, redirect } from '@sveltejs/kit';
 import bcrypt from 'bcrypt';
-import { randomUUID } from 'crypto';
+//import { randomUUID } from 'crypto';
+import { db } from '$lib/server/index.ts';
+//import { randomUUID } from 'crypto';
 
-import { db } from '$lib/server/auth.ts';
+//import { db } from '$lib/server/auth.ts';
 import {
   usersTable,
-  sessionsTable
+  /*sessionsTable*/
 } from '$lib/server/db/schema';
+//import { send } from 'vite';
 
 
 export const actions = {
@@ -26,18 +29,10 @@ export const actions = {
       });
     }
 
-    //
-    // 1 — Hash password
-    //
-
     const passwordHash = await bcrypt.hash(password, 10);
     
     console.log("password hash");
     console.log(password);
-    
-    //
-    // 2 — Insert user
-    //
 
     try {
 
@@ -50,6 +45,8 @@ export const actions = {
 
     });
 
+    
+
   console.log("Signup successful, time to login to verify");
 
   throw redirect(303, '/login');
@@ -57,14 +54,7 @@ export const actions = {
 } catch (err: any) {
 
 
-  //
-  // VERY IMPORTANT
-  // Let redirects pass through
-  //
-
   if (err?.status === 303) {
-    
-    //console.log("something went wrong");
     
     throw err;
   
@@ -72,11 +62,6 @@ export const actions = {
 
   console.error(err);
   
-
-
-  //
-  // Handle duplicate email
-  //
 
   if (err.code === '23505') {
 

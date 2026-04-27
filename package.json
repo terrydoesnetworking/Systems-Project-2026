@@ -83,6 +83,8 @@
 		"bcrypt": "^6.0.0",
 		"dotenv": "^17.4.2",
 		"drizzle-orm": "^0.45.2",
+		"node-cron": "^4.2.1",
+		"nodemailer": "^8.0.6",
 		"pg": "^8.20.0",
 		"vercel": "^52.0.0"
 	}
