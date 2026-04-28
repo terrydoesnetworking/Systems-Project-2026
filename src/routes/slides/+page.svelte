@@ -82,7 +82,7 @@
 							<li>Continuous learning is necessary to counter evolving threats.</li>
 						</ul>
 					</div>
-				</div>
+				
 				<div id="Module 2" class="tab-content">
 					<div class="mb-6 flex overflow-x-auto border-b border-gray-200">
 						<button
