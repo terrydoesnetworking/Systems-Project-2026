@@ -1,16 +1,18 @@
-import { betterAuth } from 'better-auth/minimal';
-import { drizzleAdapter } from 'better-auth/adapters/drizzle';
-import { sveltekitCookies } from 'better-auth/svelte-kit';
-import { env } from '$env/dynamic/private';
-import { getRequestEvent } from '$app/server';
-import { db } from '$lib/server/db';
+//import { betterAuth } from "better-auth";
+//import { drizzleAdapter } from "better-auth/adapters/drizzle";
+//import { db } from "./index.ts"; // your drizzle instance
 
-export const auth = betterAuth({
-	baseURL: env.ORIGIN,
-	secret: env.BETTER_AUTH_SECRET,
-	database: drizzleAdapter(db, { provider: 'mysql' }),
-	emailAndPassword: { enabled: true },
-	plugins: [
-		sveltekitCookies(getRequestEvent) // make sure this is the last plugin in the array
-	]
-});
+import { drizzle } from "drizzle-orm/neon-http";
+import { neon } from "@neondatabase/serverless";
+import { config } from "dotenv";
+
+config({ path: ".env.local"});
+
+const sql = neon(process.env.DATABASE_URL!);
+export const db = drizzle({ client: sql });
+
+// export const auth = betterAuth({
+//     database: drizzleAdapter(db, {
+//         provider: "pg", // or "mysql", "sqlite"
+//     }),
+// });

@@ -1,6 +1,5 @@
 /// <reference types="vitest/config" />
 import { defineConfig } from 'vitest/config';
-import { playwright } from '@vitest/browser-playwright';
 import { paraglideVitePlugin } from '@inlang/paraglide-js';
 import tailwindcss from '@tailwindcss/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
@@ -31,7 +30,7 @@ export default defineConfig({
 					name: 'client',
 					browser: {
 						enabled: true,
-						provider: playwright(),
+						//provider: playwright(),
 						instances: [
 							{
 								browser: 'chromium',
@@ -66,7 +65,7 @@ export default defineConfig({
 					browser: {
 						enabled: true,
 						headless: true,
-						provider: playwright({}),
+						//provider: playwright({}),
 						instances: [
 							{
 								browser: 'chromium'

@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1776790360972,
+      "tag": "0000_windy_revanche",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1776804337116,
+      "tag": "0001_marvelous_thing",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1777156287534,
+      "tag": "0002_nifty_living_lightning",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1777162822213,
+      "tag": "0003_polite_ultimates",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1777163104938,
+      "tag": "0004_whole_risque",
+      "breakpoints": true
+    }
+  ]
+}
