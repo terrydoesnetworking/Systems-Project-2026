@@ -1,14 +1,8 @@
-//import { uuid } from "better-auth";
-//import { sql } from "drizzle-orm";
 import { integer, pgTable, varchar, timestamp } from "drizzle-orm/pg-core";
-// import { db } from "../index.ts";
-// import { text } from "stream/consumers";
-//import { db } from "../auth.ts"
 
 export const usersTable = pgTable("users", {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
   name: varchar({ length: 255 }).notNull(),
-  // age: integer().notNull(),
   email: varchar({ length: 255 }).notNull().unique(),
 
   passwordHash: varchar("password_hash", { length: 255 }).notNull(),
@@ -36,7 +30,6 @@ export const phishingEmails = pgTable('phishing_emails', {
   tags: varchar("tags").array(),
   createdAt: timestamp("created_at").defaultNow()
 
-  //userEmail: varchar({length: 255 }).notNull().references(() => usersTable.email)
 });
 
 export const phishingLogTable = pgTable("phishing_log", {

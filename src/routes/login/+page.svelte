@@ -49,8 +49,15 @@
                 >
                   Login
                 </button>
+                
               </div>
             </form>
+            <form method="POST" action="/logout">
+            <button type="submit" class="w-1/2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition duration-200">
+                  Logout
+            </button>
+            </form>
+            
           </div>
         </div>
 

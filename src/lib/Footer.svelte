@@ -4,8 +4,8 @@
       
       <!-- Brand Section -->
       <div class="w-full lg:w-5/12 pb-8 text-center">
-        <h1 class="mb-3 mt-0 text-4xl font-bold text-white">Example Label</h1>
-        <small class="text-white/50">© Copyright by.</small>
+        <h1 class="mb-3 mt-0 text-4xl font-bold text-white">Security Training and Phishing Simulator</h1>
+        <small class="text-white/50">© Copyright by someone</small>
       </div>
 
       <!-- Contact Us Section -->
@@ -13,11 +13,11 @@
         <h4 class="text-xl font-semibold mb-4">Contact Us</h4>
         <ul class="list-none pl-2">
           <li class="mb-2">
-            <a href="mailto:example@email.com" class="hover:text-gray-300">Email: example@email.com</a>
+            <a href="mailto:systemsproject2026@gmail.com" class="hover:text-gray-300">Email: systemsproject2026@gmail.com</a>
           </li>
-          <li class="mb-2">
+          <!-- <li class="mb-2">
             <a href="tel:+11111111111" class="hover:text-gray-300">Phone: (111-111-1111)</a>
-          </li>
+          </li> -->
         </ul>
       </div>
 
@@ -26,13 +26,13 @@
         <h4 class="text-xl font-semibold mb-4">About Us</h4>
         <ul class="list-none pl-2">
           <!-- svelte-ignore a11y_invalid_attribute -->
-          <li class="mb-2"><a href="#" class="hover:text-gray-300">Link 1</a></li>
+          <li class="mb-2"><a href="/" class="hover:text-gray-300">Home</a></li>
           <!-- svelte-ignore a11y_invalid_attribute -->
-          <li class="mb-2"><a href="#" class="hover:text-gray-300">Link 2</a></li>
+          <!-- <li class="mb-2"><a href="#" class="hover:text-gray-300">Link 2</a></li> -->
           <!-- svelte-ignore a11y_invalid_attribute -->
-          <li class="mb-2"><a href="#" class="hover:text-gray-300">Link 3</a></li>
+          <!-- <li class="mb-2"><a href="#" class="hover:text-gray-300">Link 3</a></li> -->
           <!-- svelte-ignore a11y_invalid_attribute -->
-          <li class="mb-2"><a href="#" class="hover:text-gray-300">Link 4</a></li>
+          <!-- <li class="mb-2"><a href="#" class="hover:text-gray-300">Link 4</a></li> -->
         </ul>
       </div>
 

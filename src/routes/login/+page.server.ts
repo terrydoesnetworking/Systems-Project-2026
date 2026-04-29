@@ -8,15 +8,9 @@ import bcrypt from 'bcrypt';
 export const actions = {
   default: async ({ request, cookies }) => {
     
-    // console.log("request varible");
-    // console.log(request);
-    // console.log("cookies varible");
-    // console.log(cookies);
     console.log("Start of function");
 
     const data = await request.formData();
-    
-    //console.log(data);
     
     const email = data.get('Email')?.toString();
     const password = data.get('password')?.toString();
@@ -25,7 +19,7 @@ export const actions = {
         console.log("if statement checking for null entries");
         return fail(400, { message: 'Missing credentials' });
     }
-    //console.log("email and password was not null" + email + password);
+    
     const user = await db.query.usersTable.findFirst({
       where: eq(usersTable.email, email),
     });
